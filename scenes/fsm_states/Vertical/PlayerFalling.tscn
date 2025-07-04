@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5lk5ivk030du"]
+
+[ext_resource type="Script" uid="uid://xwyccwf7ph6r" path="res://scripts/fsm_states/PlayerFalling.cs" id="1_6nt5l"]
+
+[node name="PlayerFalling" type="Node"]
+script = ExtResource("1_6nt5l")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.15
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="OnCoyoteTimerTimeout"]

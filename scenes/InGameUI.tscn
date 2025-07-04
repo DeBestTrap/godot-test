@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr1s4glwvsu4r"]
+
+[ext_resource type="Script" uid="uid://dus50p0jjk1yt" path="res://scripts/InGameUI.cs" id="1_5ldle"]
+[ext_resource type="Texture2D" uid="uid://cnejucmfyxrst" path="res://assets/ui/sprite sheets/Sprite sheet for Basic Pack.png" id="1_6e2fk"]
+[ext_resource type="FontFile" uid="uid://i1s0qha7reqt" path="res://assets/fonts/PixelOperator8.ttf" id="2_5ldle"]
+
+[node name="InGameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ldle")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="StatsBox" type="MarginContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="StatsBackground" type="NinePatchRect" parent="MarginContainer/StatsBox"]
+layout_mode = 2
+texture = ExtResource("1_6e2fk")
+region_rect = Rect2(868, 6, 24, 22)
+patch_margin_left = 5
+patch_margin_top = 4
+patch_margin_right = 5
+patch_margin_bottom = 4
+
+[node name="Stats" type="MarginContainer" parent="MarginContainer/StatsBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="StatsVContainer" type="VBoxContainer" parent="MarginContainer/StatsBox/Stats"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Health" type="Label" parent="MarginContainer/StatsBox/Stats/StatsVContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ldle")
+theme_override_font_sizes/font_size = 30
+text = "Health"
+
+[node name="Score" type="Label" parent="MarginContainer/StatsBox/Stats/StatsVContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ldle")
+theme_override_font_sizes/font_size = 30
+text = "Score"
+
+[node name="DebugBox" type="MarginContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="DebugBackground" type="NinePatchRect" parent="MarginContainer/DebugBox"]
+layout_mode = 2
+texture = ExtResource("1_6e2fk")
+region_rect = Rect2(742, 39, 18, 18)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="DebugInfo" type="MarginContainer" parent="MarginContainer/DebugBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/DebugBox/DebugInfo"]
+layout_mode = 2
+
+[node name="DebugText" type="Label" parent="MarginContainer/DebugBox/DebugInfo/VBoxContainer"]
+layout_mode = 2
+text = "Hi"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dghgutjly6gh8"]
+
+[ext_resource type="Script" uid="uid://bgxgn8ptv1608" path="res://scripts/fsm_states/Falling.cs" id="1_eo8jn"]
+
+[node name="Falling" type="Node"]
+script = ExtResource("1_eo8jn")

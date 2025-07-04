@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chw6lu0r7p6f8"]
+
+[ext_resource type="Script" uid="uid://yob8x1kkced6" path="res://scripts/fsm_states/Idle.cs" id="1_ya4eo"]
+
+[node name="Idle" type="Node"]
+script = ExtResource("1_ya4eo")

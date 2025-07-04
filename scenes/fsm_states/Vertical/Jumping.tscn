@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://chfkbmjscaatu"]
+
+[ext_resource type="Script" uid="uid://bmcufuf7wba2g" path="res://scripts/fsm_states/Jumping.cs" id="1_1d7e4"]
+
+[node name="Jumping" type="Node"]
+script = ExtResource("1_1d7e4")

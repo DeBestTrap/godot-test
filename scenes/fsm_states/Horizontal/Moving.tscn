@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds3m3p5haex0"]
+
+[ext_resource type="Script" uid="uid://dnlfi7eqwh7t2" path="res://scripts/fsm_states/Moving.cs" id="1_5b5db"]
+
+[node name="Moving" type="Node"]
+script = ExtResource("1_5b5db")
